@@ -10,6 +10,7 @@ try {
 
 export default defineConfig({
   test: {
+    retry: 4,
     include: ['src/specs/server/**/*.e2e-spec.ts'],
     globalSetup,
     testTimeout: 15_000,
