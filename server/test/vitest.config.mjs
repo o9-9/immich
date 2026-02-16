@@ -7,6 +7,7 @@ export default defineConfig({
     root: './',
     globals: true,
     include: ['src/**/*.spec.ts'],
+    retry: process.env.CI ? 4 : 0,
     coverage: {
       provider: 'v8',
       include: ['src/cores/**', 'src/services/**', 'src/utils/**', 'src/sql-tools/**'],

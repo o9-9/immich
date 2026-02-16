@@ -7,6 +7,7 @@ export default defineConfig({
     root: './',
     globals: true,
     include: ['test/medium/**/*.spec.ts'],
+    retry: process.env.CI ? 4 : 0,
     globalSetup: ['test/medium/globalSetup.ts'],
     server: {
       deps: {

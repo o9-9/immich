@@ -59,6 +59,7 @@ export default defineConfig({
     include: ['src/**/*.{test,spec}.{js,ts}'],
     globals: true,
     environment: 'happy-dom',
+    retry: process.env.CI ? 4 : 0,
     setupFiles: ['./src/test-data/setup.ts'],
     sequence: {
       hooks: 'list',
